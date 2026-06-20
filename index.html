@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium space clearing and energy renewal ceremonies for homes, businesses, and significant transitions across the UK South West.">
+<title>Luminal — Space Clearing & Energy Renewal Ceremonies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* === TOKENS === */
+:root {
+  --stone:#E8E4DC; --smoke:#C4BDB4; --earth:#8B7B6E; --bark:#5C4A3B;
+  --sage:#7A8C78; --tallow:#D4C9A8; --dusk:#3D3530; --flint:#F5F2EE;
+  --ff-d:'Cormorant Garamond',Georgia,serif;
+  --ff-b:'Jost',system-ui,sans-serif;
+  --nav-h:72px; --max-w:1280px; --ease:0.35s ease;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff-b);font-weight:300;background:var(--flint);color:var(--dusk);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+
+/* === SKIP === */
+.skip{position:absolute;left:-9999px;top:16px;z-index:9999;background:var(--dusk);color:var(--flint);padding:8px 24px;font-size:13px;letter-spacing:.1em}
+.skip:focus{left:16px}
+
+/* === TYPE === */
+.d-xl{font-family:var(--ff-d);font-weight:300;font-size:clamp(52px,8vw,96px);line-height:1.04;letter-spacing:-.01em}
+.d-lg{font-family:var(--ff-d);font-weight:300;font-size:clamp(38px,5.2vw,66px);line-height:1.1}
+.d-md{font-family:var(--ff-d);font-weight:300;font-size:clamp(29px,4.1vw,45px);line-height:1.2}
+.d-sm{font-family:var(--ff-d);font-weight:300;font-style:italic;font-size:clamp(18px,2.5vw,28px);line-height:1.35}
+.label{font-family:var(--ff-b);font-weight:400;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--earth)}
+.b-lg{font-size:20px;line-height:1.8}      /* was 18px */
+.b-md{font-size:18px;line-height:1.75}     /* was 16px */
+.b-sm{font-size:15px;line-height:1.7;color:var(--earth)}  /* was 14px */
+
+/* === LAYOUT === */
+.wrap{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 40px}
+@media(max-width:768px){.wrap{padding:0 24px}}
+.sec{padding:96px 0}
+.sec-sm{padding:64px 0}
+.sec-lg{padding:128px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+@media(max-width:1024px){.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.g2,.g3{grid-template-columns:1fr;gap:32px}}
+.tc{text-align:center}
+.stk>*+*{margin-top:24px}
+.stk-sm>*+*{margin-top:16px}
+
+/* === COLOUR === */
+.bg-flint{background:var(--flint)} .bg-stone{background:var(--stone)}
+.bg-bark{background:var(--bark);color:var(--flint)}
+.bg-dusk{background:var(--dusk);color:var(--flint)}
+.c-earth{color:var(--earth)} .c-bark{color:var(--bark)}
+.c-flint{color:var(--flint)} .c-smoke{color:var(--smoke)}
+
+/* === RULES === */
+.rule{border:none;border-top:1px solid var(--stone);margin:0}
+.vline{width:1px;height:64px;background:var(--tallow);margin:0 auto}
+.dc{display:flex;align-items:center;gap:24px;margin:40px 0}
+.dc::before,.dc::after{content:'';flex:1;border-top:1px solid var(--stone)}
+.dc span{width:6px;height:6px;border:1px solid var(--smoke);border-radius:50%;flex-shrink:0}
+
+/* === NAV === */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;transition:background var(--ease),backdrop-filter var(--ease)}
+.nav.scrolled{background:rgba(245,242,238,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,189,180,.3)}
+.nav-in{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between}
+@media(max-width:768px){.nav-in{padding:0 24px}}
+.nav-logo{font-family:var(--ff-d);font-weight:300;font-size:22px;letter-spacing:.08em;color:var(--dusk);cursor:pointer}
+.nav-logo sub{display:block;font-family:var(--ff-b);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--earth);margin-top:1px;font-style:normal}
+.nav-links{display:flex;align-items:center;gap:40px}
+.nav-links a{font-family:var(--ff-b);font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--earth);transition:color var(--ease)}
+.nav-links a:hover{color:var(--dusk)}
+.nav-cta{font-family:var(--ff-b);font-weight:400;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bark);border-bottom:1px solid var(--tallow);padding-bottom:1px;transition:color var(--ease),border-color var(--ease);cursor:pointer}
+.nav-cta:hover{color:var(--dusk);border-color:var(--smoke)}
+@media(max-width:1024px){.nav-links{display:none}}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px}
+.burger span{display:block;width:22px;height:1px;background:var(--dusk);transition:transform var(--ease),opacity var(--ease)}
+.burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:1024px){.burger{display:flex}}
+.mob-overlay{position:fixed;inset:0;background:var(--dusk);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;opacity:0;pointer-events:none;transition:opacity .4s ease}
+.mob-overlay.open{opacity:1;pointer-events:all}
+.mob-overlay a{font-family:var(--ff-d);font-weight:300;font-size:clamp(28px,6vw,50px);color:var(--flint);opacity:0;transform:translateY(12px);transition:opacity .4s ease,transform .4s ease,color .2s ease;cursor:pointer}
+.mob-overlay a:hover{color:var(--tallow)}
+.mob-overlay.open a{opacity:1;transform:translateY(0)}
+.mob-overlay.open a:nth-child(1){transition-delay:.05s}
+.mob-overlay.open a:nth-child(2){transition-delay:.1s}
+.mob-overlay.open a:nth-child(3){transition-delay:.15s}
+.mob-overlay.open a:nth-child(4){transition-delay:.2s}
+.mob-overlay.open a:nth-child(5){transition-delay:.25s}
+.mob-overlay.open a:nth-child(6){transition-delay:.3s}
+.mob-overlay.open a:nth-child(7){transition-delay:.35s}
+
+/* === BUTTONS === */
+.btn{display:inline-block;font-family:var(--ff-b);font-weight:400;font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:16px 40px;border:1px solid transparent;cursor:pointer;transition:background var(--ease),color var(--ease),border-color var(--ease);line-height:1;white-space:nowrap}
+.btn-p{background:var(--bark);color:var(--flint);border-color:var(--bark)}
+.btn-p:hover{background:var(--dusk);border-color:var(--dusk)}
+.btn-o{background:transparent;color:var(--bark);border-color:var(--bark)}
+.btn-o:hover{background:var(--bark);color:var(--flint)}
+.btn-g{background:transparent;color:var(--flint);border-color:rgba(245,242,238,.4)}
+.btn-g:hover{background:rgba(245,242,238,.12);border-color:rgba(245,242,238,.7)}
+.btn-pair{display:flex;gap:24px;flex-wrap:wrap}
+.al{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-b);font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--bark);transition:gap var(--ease),color var(--ease);cursor:pointer}
+.al:hover{gap:14px;color:var(--dusk)}
+.al::after{content:'→';font-family:serif;font-size:14px}
+
+/* === HERO === */
+.hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:flex-end;padding-bottom:96px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(160deg,#d6cfc6 0%,#c0b5a8 30%,#a8998a 60%,#8b7b6e 100%);animation:hzoom 24s ease-in-out infinite alternate}
+.hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 30%,rgba(212,201,168,.35) 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 20% 80%,rgba(92,74,59,.25) 0%,transparent 60%)}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(61,53,48,.06) 0%,transparent 40%,rgba(61,53,48,.52) 100%)}
+@keyframes hzoom{0%{transform:scale(1)}100%{transform:scale(1.06) }}
+.hero-c{position:relative;z-index:2;max-width:var(--max-w);width:100%;margin:0 auto;padding:0 40px}
+@media(max-width:768px){.hero-c{padding:0 24px}}
+.hero-eye{font-family:var(--ff-b);font-weight:400;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(245,242,238,.6);margin-bottom:24px}
+.hero-h{font-family:var(--ff-d);font-weight:300;font-size:clamp(54px,9vw,100px);line-height:1.02;color:var(--flint);max-width:700px;margin-bottom:32px}
+.hero-sub{font-family:var(--ff-b);font-weight:300;font-size:16px;line-height:1.75;color:rgba(245,242,238,.72);max-width:460px;margin-bottom:48px}
+.scroll-c{position:absolute;bottom:40px;right:40px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(245,242,238,.4);font-family:var(--ff-b);font-size:9px;letter-spacing:.2em;text-transform:uppercase;writing-mode:vertical-rl}
+.scroll-l{width:1px;height:48px;background:rgba(245,242,238,.2);position:relative;overflow:hidden}
+.scroll-l::after{content:'';position:absolute;top:-100%;left:0;width:100%;height:100%;background:rgba(245,242,238,.55);animation:sdown 2.2s ease-in-out infinite}
+@keyframes sdown{0%{top:-100%}100%{top:100%}}
+
+/* === INTRO === */
+.intro{padding:96px 0;background:var(--flint)}
+.intro-in{max-width:800px;margin:0 auto;text-align:center}
+.intro-t{font-family:var(--ff-d);font-weight:300;font-size:clamp(20px,3vw,32px);line-height:1.55;color:var(--dusk)}
+.intro-b{margin-top:32px;font-size:16px;color:var(--earth);line-height:1.8;max-width:580px;margin-left:auto;margin-right:auto}
+
+/* === SERVICES GRID === */
+.svc-sec{background:var(--stone);padding:96px 0}
+.sec-hdr{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;gap:40px}
+@media(max-width:768px){.sec-hdr{flex-direction:column;align-items:flex-start}}
+.svc-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--smoke)}
+@media(max-width:1024px){.svc-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-cards{grid-template-columns:1fr}}
+.svc-card{background:var(--flint);padding:48px 32px;display:flex;flex-direction:column;gap:16px;transition:background var(--ease)}
+.svc-card:hover{background:#f0ece4}
+.svc-n{font-family:var(--ff-d);font-weight:300;font-style:italic;font-size:40px;color:var(--tallow);line-height:1}
+.svc-t{font-family:var(--ff-d);font-weight:300;font-size:24px;color:var(--dusk);line-height:1.25}
+.svc-b{font-size:14px;color:var(--earth);line-height:1.75;flex:1}
+.svc-p{font-family:var(--ff-d);font-weight:300;font-size:20px;color:var(--bark)}
+
+/* === WHO === */
+.who-sec{padding:96px 0;background:var(--flint)}
+.who-g{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+@media(max-width:768px){.who-g{grid-template-columns:1fr;gap:48px}}
+.who-img{position:relative;aspect-ratio:4/5;background:var(--stone);overflow:hidden}
+.who-img-in{position:absolute;inset:0;background:linear-gradient(135deg,#c8bfb4 0%,#a89a8d 40%,#8b7b6e 70%,#6e5e52 100%)}
+.who-img-in::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 40% at 35% 65%,rgba(212,201,168,.4) 0%,transparent 60%)}
+.who-cap{position:absolute;bottom:32px;left:32px;right:32px;font-family:var(--ff-d);font-weight:300;font-style:italic;font-size:20px;color:rgba(245,242,238,.85);line-height:1.4}
+.who-list{display:flex;flex-direction:column;gap:24px}
+.who-item{display:flex;gap:16px;padding-bottom:24px;border-bottom:1px solid var(--stone)}
+.who-item:last-child{border-bottom:none;padding-bottom:0}
+.who-dot{width:4px;height:4px;border-radius:50%;background:var(--tallow);flex-shrink:0;margin-top:10px}
+.who-txt{font-size:15px;color:var(--earth);line-height:1.7}
+.who-txt strong{display:block;font-family:var(--ff-d);font-weight:300;font-size:19px;color:var(--dusk);margin-bottom:2px}
+
+/* === TESTIMONIAL === */
+.testi-sec{background:var(--bark);padding:96px 0}
+.testi-in{max-width:740px;margin:0 auto;text-align:center}
+.testi-q{font-family:var(--ff-d);font-weight:300;font-style:italic;font-size:clamp(20px,3vw,32px);color:var(--flint);line-height:1.55}
+.testi-q::before{content:'\201C'} .testi-q::after{content:'\201D'}
+.testi-attr{margin-top:32px;font-family:var(--ff-b);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tallow)}
+.testi-rule{width:40px;height:1px;background:var(--tallow);margin:32px auto 16px;opacity:.5}
+
+/* === ABOUT INTRO === */
+.abt-sec{background:var(--flint);padding:96px 0}
+.abt-g{display:grid;grid-template-columns:2fr 3fr;gap:96px;align-items:center}
+@media(max-width:768px){.abt-g{grid-template-columns:1fr;gap:48px}}
+.abt-port{position:relative;aspect-ratio:3/4;background:var(--stone);overflow:hidden}
+.abt-port-in{position:absolute;inset:0;background:linear-gradient(150deg,#d4c9b8 0%,#b5a598 35%,#9a8878 60%,#7a6a5e 100%)}
+.abt-port-in::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 45% 55% at 40% 55%,rgba(212,201,168,.3) 0%,transparent 65%)}
+
+/* === JOURNAL === */
+.jnl-sec{background:var(--stone);padding:96px 0}
+.jnl-g{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+@media(max-width:1024px){.jnl-g{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.jnl-g{grid-template-columns:1fr}}
+.jnl-card{display:flex;flex-direction:column;gap:12px}
+.jnl-date{font-family:var(--ff-b);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--earth)}
+.jnl-t{font-family:var(--ff-d);font-weight:300;font-size:22px;color:var(--dusk);line-height:1.35}
+.jnl-b{font-size:14px;color:var(--earth);line-height:1.7}
+
+/* === CTA BANNER === */
+.cta-ban{position:relative;padding:120px 0;background:var(--dusk);overflow:hidden}
+.cta-ban::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 80% 50%,rgba(122,140,120,.12) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 15% 20%,rgba(212,201,168,.08) 0%,transparent 55%)}
+.cta-ban-in{position:relative;z-index:1;max-width:660px;margin:0 auto;text-align:center}
+.cta-ban-in .d-lg{color:var(--flint);margin-bottom:16px}
+.cta-ban-in .b-md{color:rgba(245,242,238,.6);margin-bottom:48px}
+
+/* === FOOTER === */
+.foot{background:var(--dusk);border-top:1px solid rgba(196,189,180,.12);padding:96px 0 32px}
+.foot-g{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:80px}
+@media(max-width:1024px){.foot-g{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.foot-g{grid-template-columns:1fr;gap:40px}}
+.foot-brand .nav-logo{color:var(--flint);margin-bottom:16px}
+.foot-brand .nav-logo sub{color:var(--smoke)}
+.foot-brand p{font-size:13px;color:var(--smoke);line-height:1.7;max-width:270px}
+.foot-col-t{font-family:var(--ff-b);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke);margin-bottom:20px}
+.foot-col ul{display:flex;flex-direction:column;gap:10px}
+.foot-col a{font-size:13px;color:rgba(196,189,180,.65);transition:color var(--ease)}
+.foot-col a:hover{color:var(--flint)}
+.foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(196,189,180,.1);gap:16px;flex-wrap:wrap}
+.foot-copy{font-size:11px;color:rgba(196,189,180,.35);letter-spacing:.06em}
+.foot-links{display:flex;gap:24px}
+.foot-links a{font-size:11px;color:rgba(196,189,180,.35);transition:color var(--ease)}
+.foot-links a:hover{color:var(--smoke)}
+
+/* === PAGE HERO === */
+.pg-hero{padding-top:calc(var(--nav-h) + 80px);padding-bottom:64px;background:var(--flint)}
+.pg-hero-in{max-width:680px}
+
+/* === SERVICES FULL === */
+.svc-full-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:1024px){.svc-full-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.svc-full-cards{grid-template-columns:1fr}}
+.sfc{border:1px solid var(--stone);padding:32px;display:flex;flex-direction:column;gap:12px;transition:border-color var(--ease),box-shadow var(--ease)}
+.sfc:hover{border-color:var(--smoke);box-shadow:0 4px 32px rgba(61,53,48,.07)}
+.sfc .d-sm{font-size:20px}
+.sfc .b-sm{flex:1}
+.sfc-p{font-family:var(--ff-d);font-size:22px;color:var(--bark)}
+.sfc-dur{font-size:10px;letter-spacing:.12em;color:var(--earth);text-transform:uppercase}
+.tier-lbl{display:flex;align-items:center;gap:24px;margin-bottom:32px;margin-top:64px}
+.tier-lbl::after{content:'';flex:1;height:1px;background:var(--stone)}
+.tier-lbl:first-child{margin-top:0}
+
+/* === FAQ === */
+.faq-list{max-width:720px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--stone)}
+.faq-q{width:100%;background:none;border:none;padding:28px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;cursor:pointer;text-align:left}
+.faq-qt{font-family:var(--ff-d);font-weight:300;font-size:20px;color:var(--dusk);line-height:1.35}
+.faq-ic{width:20px;height:20px;flex-shrink:0;position:relative;margin-top:4px}
+.faq-ic::before,.faq-ic::after{content:'';position:absolute;background:var(--smoke);transition:transform var(--ease),opacity var(--ease)}
+.faq-ic::before{top:50%;left:0;right:0;height:1px;transform:translateY(-50%)}
+.faq-ic::after{left:50%;top:0;bottom:0;width:1px;transform:translateX(-50%)}
+.faq-item.open .faq-ic::after{transform:translateX(-50%) rotate(90deg);opacity:0}
+.faq-a{font-size:15px;color:var(--earth);line-height:1.8;max-height:0;overflow:hidden;transition:max-height .45s ease,padding-bottom .3s ease}
+.faq-item.open .faq-a{max-height:500px;padding-bottom:28px}
+
+/* === TESTIMONIALS FULL === */
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:768px){.testi-grid{grid-template-columns:1fr}}
+.tc-card{background:var(--stone);padding:48px 32px;display:flex;flex-direction:column;gap:16px}
+.tc-card blockquote{font-family:var(--ff-d);font-weight:300;font-style:italic;font-size:18px;color:var(--dusk);line-height:1.6}
+.tc-card blockquote::before{content:'\201C'} .tc-card blockquote::after{content:'\201D'}
+.tc-attr{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--earth);margin-top:auto}
+.tc-feat{background:var(--bark);grid-column:1/-1}
+.tc-feat blockquote{font-size:24px;color:var(--flint)}
+.tc-feat .tc-attr{color:var(--tallow)}
+@media(max-width:768px){.tc-feat{grid-column:1}}
+
+/* === MEMBERSHIP === */
+.mem-sec{background:var(--dusk);padding:96px 0}
+.mem-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+@media(max-width:900px){.mem-g{grid-template-columns:1fr}}
+.mem-card{border:1px solid rgba(196,189,180,.15);padding:40px 32px;display:flex;flex-direction:column;gap:16px;transition:border-color var(--ease)}
+.mem-card:hover{border-color:rgba(212,201,168,.35)}
+.mem-feat{border-color:var(--tallow);background:rgba(212,201,168,.06)}
+.mem-tag{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--tallow);border:1px solid rgba(212,201,168,.3);display:inline-block;padding:4px 12px;width:fit-content}
+.mem-name{font-family:var(--ff-d);font-weight:300;font-size:26px;color:var(--flint);line-height:1.2}
+.mem-price{font-family:var(--ff-d);font-weight:300;font-size:38px;color:var(--flint);line-height:1}
+.mem-price sub{font-size:16px;color:var(--smoke);vertical-align:baseline;font-family:var(--ff-b);font-weight:300}
+.mem-feats{display:flex;flex-direction:column;gap:12px;flex:1}
+.mem-feat-item{display:flex;gap:12px;align-items:flex-start;font-size:13px;color:rgba(196,189,180,.8);line-height:1.6}
+.mem-feat-item::before{content:'—';color:var(--tallow);flex-shrink:0}
+
+/* === CONTACT / BOOKING === */
+.con-sec{padding:64px 0 96px;background:var(--flint)}
+.con-g{display:grid;grid-template-columns:1fr 2fr;gap:96px;align-items:start}
+@media(max-width:900px){.con-g{grid-template-columns:1fr}}
+.con-info{position:sticky;top:calc(var(--nav-h) + 32px)}
+.con-detail{display:flex;flex-direction:column;gap:16px;padding-top:32px;border-top:1px solid var(--stone)}
+.con-di{font-size:14px;color:var(--earth)}
+.con-di strong{display:block;font-family:var(--ff-b);font-weight:400;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke);margin-bottom:3px}
+.fg{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.fl{font-family:var(--ff-b);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--earth)}
+.fi,.fs,.fta{font-family:var(--ff-b);font-weight:300;font-size:15px;color:var(--dusk);background:var(--flint);border:1px solid var(--stone);padding:14px 18px;width:100%;outline:none;transition:border-color var(--ease);appearance:none}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--smoke);box-shadow:0 0 0 3px rgba(122,140,120,.15)}
+.fta{min-height:140px;resize:vertical}
+.fs{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238B7B6E' stroke-width='1' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;background-size:12px;padding-right:48px;cursor:pointer}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:600px){.fg2{grid-template-columns:1fr}}
+.fchk{display:flex;align-items:flex-start;gap:12px;margin-bottom:20px}
+.fchk input[type=checkbox]{width:16px;height:16px;border:1px solid var(--stone);background:var(--flint);appearance:none;flex-shrink:0;margin-top:2px;cursor:pointer;transition:border-color var(--ease),background var(--ease)}
+.fchk input:checked{background:var(--bark);border-color:var(--bark);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='%23F5F2EE' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center;background-size:12px}
+.fchk label{font-size:13px;color:var(--earth);line-height:1.65}
+.fnote{font-size:12px;color:var(--smoke);margin-top:8px}
+
+/* === ABOUT FULL === */
+.abt-phil{background:var(--stone);padding:96px 0}
+.abt-phil-in{max-width:720px;margin:0 auto}
+.proc-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px}
+@media(max-width:900px){.proc-steps{grid-template-columns:1fr}}
+.proc-step{display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:1px solid var(--stone)}
+.proc-n{font-family:var(--ff-d);font-weight:300;font-style:italic;font-size:48px;color:var(--tallow);line-height:1}
+.creds{display:flex;gap:48px;flex-wrap:wrap;margin-top:48px;padding-top:32px;border-top:1px solid var(--stone)}
+.cred{display:flex;flex-direction:column;gap:4px}
+.cred-t{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke)}
+.cred-v{font-family:var(--ff-d);font-size:18px;color:var(--dusk)}
+
+/* === JOURNAL FULL === */
+.jfc{background:var(--flint);border:1px solid var(--stone);padding:40px 32px;display:flex;flex-direction:column;gap:12px;transition:border-color var(--ease)}
+.jfc:hover{border-color:var(--smoke)}
+.jfc .jnl-t{font-size:22px}
+
+/* === PAGE SYSTEM === */
+.page{display:none}
+.page.active{display:block}
+
+/* === REVEAL === */
+.rev{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rev.in{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- skip nav -->
+<a href="#main" class="skip">Skip to main content</a>
+
+<!-- mobile overlay -->
+<nav class="mob-overlay" id="mobNav" aria-label="Mobile navigation">
+  <a onclick="go('home')">Home</a>
+  <a onclick="go('about')">About</a>
+  <a onclick="go('services')">Services</a>
+  <a onclick="go('membership')">Stewardship</a>
+  <a onclick="go('testimonials')">Testimonials</a>
+  <a onclick="go('faq')">FAQ</a>
+  <a onclick="go('booking')">Book a Ceremony</a>
+</nav>
+
+<!-- nav -->
+<header class="nav" id="siteNav">
+  <div class="nav-in">
+    <div class="nav-logo" onclick="go('home')" role="link" tabindex="0" aria-label="Luminal home">
+      LUMINAL<sub>Space Clearing &amp; Energy Renewal</sub>
+    </div>
+    <nav class="nav-links" aria-label="Primary">
+      <a onclick="go('about')">About</a>
+      <a onclick="go('services')">Services</a>
+      <a onclick="go('membership')">Stewardship</a>
+      <a onclick="go('journal')">Journal</a>
+      <a onclick="go('testimonials')">Testimonials</a>
+      <a onclick="go('faq')">FAQ</a>
+    </nav>
+    <span class="nav-cta" onclick="go('booking')" role="button" tabindex="0">Book a Ceremony</span>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ==================== HOME ==================== -->
+<div class="page active" id="page-home">
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-bg" role="presentation"></div>
+    <div class="hero-c">
+      <p class="hero-eye">Space Clearing &amp; Energy Renewal &middot; Somerset, England</p>
+      <h1 class="hero-h">Where spaces<br>begin again.</h1>
+      <p class="hero-sub">Professional space clearing and energy renewal ceremonies for homes, businesses, and the moments of significant change.</p>
+      <div class="btn-pair">
+        <span class="btn btn-p" onclick="go('booking')" role="button" tabindex="0">Book a Ceremony</span>
+        <span class="btn btn-g" onclick="go('about')" role="button" tabindex="0">About the Practice</span>
+      </div>
+    </div>
+    <div class="scroll-c" aria-hidden="true"><div class="scroll-l"></div><span>Scroll</span></div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="wrap">
+      <div class="intro-in">
+        <div class="vline" role="presentation"></div>
+        <div style="margin-top:32px"></div>
+        <p class="intro-t rev">Every home holds what has happened within it. Every room carries the residue of the lives that have moved through its walls.</p>
+        <p class="intro-b rev">Luminal offers something rare: a considered, professional ceremony to clear, restore, and renew the energetic atmosphere of a home, a business, or a possession &mdash; and to mark, with intention, the beginning of what comes next.</p>
+        <div class="dc rev"><span></span></div>
+        <p class="label rev">Calm &middot; Clarity &middot; Renewal</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="svc-sec" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="sec-hdr rev">
+        <div><p class="label">The Ceremonies</p><h2 class="d-md" id="svc-h" style="margin-top:12px">A ceremony<br>for every threshold.</h2></div>
+        <span class="al" onclick="go('services')">View all ceremonies</span>
+      </div>
+      <div class="svc-cards" role="list">
+        <article class="svc-card rev" role="listitem">
+          <div class="svc-n" aria-hidden="true">01</div>
+          <h3 class="svc-t">New Home Blessing &amp; Space Clearing</h3>
+          <p class="svc-b">A complete ceremonial clearing before you begin. Room by room, intention by intention, the space is made entirely yours.</p>
+          <p class="svc-p">From &pound;395</p>
+          <span class="al" onclick="go('booking')">Enquire</span>
+        </article>
+        <article class="svc-card rev" role="listitem">
+          <div class="svc-n" aria-hidden="true">02</div>
+          <h3 class="svc-t">Home Energy Renewal</h3>
+          <p class="svc-b">After illness, loss, or the accumulation of a difficult year, a thorough clearing restores what a deep clean cannot reach.</p>
+          <p class="svc-p">From &pound;285</p>
+          <span class="al" onclick="go('booking')">Enquire</span>
+        </article>
+        <article class="svc-card rev" role="listitem">
+          <div class="svc-n" aria-hidden="true">03</div>
+          <h3 class="svc-t">Property Transition Ritual</h3>
+          <p class="svc-b">A dignified ceremony of closure for a home you are leaving &mdash; honouring what has been and completing the chapter with care.</p>
+          <p class="svc-p">From &pound;295</p>
+          <span class="al" onclick="go('booking')">Enquire</span>
+        </article>
+        <article class="svc-card rev" role="listitem">
+          <div class="svc-n" aria-hidden="true">04</div>
+          <h3 class="svc-t">Seasonal Clearing Ceremony</h3>
+          <p class="svc-b">Aligned to the equinoxes and solstices, a seasonal ceremony maintains the energetic clarity of your home through the turning year.</p>
+          <p class="svc-p">From &pound;185</p>
+          <span class="al" onclick="go('booking')">Enquire</span>
+        </article>
+        <article class="svc-card rev" role="listitem">
+          <div class="svc-n" aria-hidden="true">05</div>
+          <h3 class="svc-t">Workplace &amp; Business Clearing</h3>
+          <p class="svc-b">The atmosphere of a business is not accidental. A Luminal clearing creates conditions for clarity and creativity that your clients will notice.</p>
+          <p class="svc-p">From &pound;395</p>
+          <span class="al" onclick="go('booking')">Enquire</span>
+        </article>
+        <article class="svc-card rev" role="listitem">
+          <div class="svc-n" aria-hidden="true">06</div>
+          <h3 class="svc-t">Personal Energetic Cleansing</h3>
+          <p class="svc-b">For the person, not the place. A ceremony of renewal for those who have carried the weight of a difficult period and are ready to set it down.</p>
+          <p class="svc-p">From &pound;145</p>
+          <span class="al" onclick="go('booking')">Enquire</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="who-sec" aria-labelledby="who-h">
+    <div class="wrap">
+      <div class="who-g">
+        <div class="who-img rev" role="img" aria-label="Luminal practice image">
+          <div class="who-img-in"></div>
+          <p class="who-cap">The work is calm.<br>The effect is lasting.</p>
+        </div>
+        <div>
+          <p class="label">Who this is for</p>
+          <h2 class="d-md" id="who-h" style="margin:16px 0 32px">For the home<br>that needs to breathe again.</h2>
+          <div class="who-list" role="list">
+            <div class="who-item rev" role="listitem"><div class="who-dot" aria-hidden="true"></div><p class="who-txt"><strong>Moving into a new home</strong>Every property carries the residue of its history. A clearing makes the space entirely yours before you begin.</p></div>
+            <div class="who-item rev" role="listitem"><div class="who-dot" aria-hidden="true"></div><p class="who-txt"><strong>After loss or separation</strong>Grief and endings leave their mark. A ceremony creates the closure and renewal that practical measures cannot.</p></div>
+            <div class="who-item rev" role="listitem"><div class="who-dot" aria-hidden="true"></div><p class="who-txt"><strong>Business owners</strong>The atmosphere of your workspace shapes the quality of the work done within it, and the experience of everyone who enters.</p></div>
+            <div class="who-item rev" role="listitem"><div class="who-dot" aria-hidden="true"></div><p class="who-txt"><strong>Seasonal maintenance</strong>For those who understand that a home, like a garden, benefits from regular and considered care through the year.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testi-sec" aria-label="Client testimonial">
+    <div class="wrap">
+      <div class="testi-in rev">
+        <div class="testi-rule" aria-hidden="true"></div>
+        <blockquote class="testi-q">I moved into my house six months ago and always felt strangely unsettled in it. After the clearing I finally felt as though it was mine. It is difficult to explain &mdash; but something genuinely shifted.</blockquote>
+        <p class="testi-attr">&mdash; V.M., Bath</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT INTRO -->
+  <section class="abt-sec" aria-labelledby="abt-h">
+    <div class="wrap">
+      <div class="abt-g">
+        <div class="abt-port rev" role="img" aria-label="Practitioner portrait"><div class="abt-port-in"></div></div>
+        <div>
+          <p class="label">The Practice</p>
+          <h2 class="d-md" id="abt-h" style="margin:16px 0 24px">Practiced.<br>Present.<br>Unhurried.</h2>
+          <p class="b-lg c-earth rev">Luminal was founded on a single conviction: that the atmosphere of the spaces we inhabit matters profoundly &mdash; and that, with skill and intention, it can be shifted.</p>
+          <p class="b-md c-earth rev" style="margin-top:16px">Every ceremony is carried out personally, with deep experience, beautiful materials, careful preparation, and complete unhurriedness. There is no script. There is only your space, your story, and your intention for what comes next.</p>
+          <div style="margin-top:32px"><span class="al rev" onclick="go('about')">About the practice</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section class="jnl-sec" aria-labelledby="jnl-h">
+    <div class="wrap">
+      <div class="sec-hdr rev">
+        <div><p class="label">From the Luminal Journal</p><h2 class="d-md" id="jnl-h" style="margin-top:12px">On ritual, season,<br>and the life of homes.</h2></div>
+        <span class="al" onclick="go('journal')">Read the Journal</span>
+      </div>
+      <div class="jnl-g">
+        <article class="jnl-card rev">
+          <p class="jnl-date">Midsummer 2025</p>
+          <h3 class="jnl-t">How to prepare your home for the summer solstice</h3>
+          <p class="jnl-b">The longest day invites a particular quality of attention. On clearing, light, and the rituals that mark the turning year.</p>
+          <span class="al" onclick="go('journal')">Read more</span>
+        </article>
+        <article class="jnl-card rev">
+          <p class="jnl-date">Spring 2025</p>
+          <h3 class="jnl-t">What space clearing is &mdash; and what it is not</h3>
+          <p class="jnl-b">A considered answer to the questions most often asked about the practice, the tradition, and the experience.</p>
+          <span class="al" onclick="go('journal')">Read more</span>
+        </article>
+        <article class="jnl-card rev">
+          <p class="jnl-date">Winter 2024</p>
+          <h3 class="jnl-t">The energetic life of a home after bereavement</h3>
+          <p class="jnl-b">On the particular weight that grief leaves in a house, and the ceremonies that help a space begin again.</p>
+          <span class="al" onclick="go('journal')">Read more</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-ban" aria-labelledby="cta-h">
+    <div class="wrap">
+      <div class="cta-ban-in rev">
+        <p class="label" style="color:rgba(212,201,168,.6);margin-bottom:20px">Begin here</p>
+        <h2 class="d-lg" id="cta-h">A ceremony begins<br>with a conversation.</h2>
+        <p class="b-md">Tell us about your space and what you are hoping to create. We will respond within two working days with a personal recommendation.</p>
+        <span class="btn btn-g" onclick="go('booking')" role="button" tabindex="0">Send an Enquiry</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER HOME -->
+<footer class="foot" role="contentinfo">
+  <div class="wrap">
+    <div class="foot-g">
+      <div class="foot-brand">
+        <div class="nav-logo" style="color:var(--flint)">LUMINAL<sub style="color:var(--smoke)">Space Clearing &amp; Energy Renewal</sub></div>
+        <p>Premium space clearing and energy renewal ceremonies for homes, businesses, and significant transitions. Somerset, England.</p>
+      </div>
+      <div class="foot-col"><p class="foot-col-t">Ceremonies</p>
+        <ul>
+          <li><a onclick="go('services')">New Home Blessing</a></li>
+          <li><a onclick="go('services')">Home Energy Renewal</a></li>
+          <li><a onclick="go('services')">Property Transition</a></li>
+          <li><a onclick="go('services')">Seasonal Clearing</a></li>
+          <li><a onclick="go('services')">Workplace Clearing</a></li>
+          <li><a onclick="go('services')">Remote Ceremony</a></li>
+        </ul>
+      </div>
+      <div class="foot-col"><p class="foot-col-t">Practice</p>
+        <ul>
+          <li><a onclick="go('about')">About</a></li>
+          <li><a onclick="go('membership')">Stewardship</a></li>
+          <li><a onclick="go('testimonials')">Testimonials</a></li>
+          <li><a onclick="go('faq')">FAQ</a></li>
+          <li><a onclick="go('journal')">Journal</a></li>
+        </ul>
+      </div>
+      <div class="foot-col"><p class="foot-col-t">Contact</p>
+        <ul>
+          <li><a onclick="go('booking')">Book a Ceremony</a></li>
+          <li><a onclick="go('contact')">Contact</a></li>
+          <li><a href="mailto:hello@luminal.co.uk">hello@luminal.co.uk</a></li>
+          <li><a href="tel:+441234567890">+44 (0)1234 567890</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p class="foot-copy">&copy; 2025 Luminal. All rights reserved. Somerset, England.</p>
+      <div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+</div><!-- /home -->
+
+<!-- ==================== ABOUT ==================== -->
+<div class="page" id="page-about">
+<main id="main-about">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">The Practice</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">Practiced.<br>Present.<br>Unhurried.</h1>
+    <p class="b-lg c-earth">Luminal was established to offer something that does not easily fit into existing categories &mdash; a professional, considered, and genuinely beautiful ceremony for the energetic life of a home.</p>
+  </div></div></div>
+
+  <section class="abt-phil">
+    <div class="wrap"><div class="abt-phil-in stk">
+      <p class="label">The Philosophy</p>
+      <h2 class="d-md rev">We are not a cleaning service.<br>We are not a religious ritual.</h2>
+      <p class="b-lg c-earth rev">What we offer is closer to the work of a skilled restorer &mdash; someone who understands that what is invisible in a space is as real as what you can touch, and that it can be transformed with the right skill, attention, and intention.</p>
+      <p class="b-md c-earth rev">The ceremonies we carry out draw on a range of traditions: the ancient practice of smoke cleansing, the use of sound to shift the atmosphere of a space, the placement of protective and restorative materials, and the careful setting of intention through ceremony and ritual.</p>
+      <p class="b-md c-earth rev">None of these approaches require a particular set of beliefs. They require only an openness to the possibility that the atmosphere of a space can change &mdash; and a desire for it to do so.</p>
+    </div></div>
+  </section>
+
+  <section style="background:var(--flint);padding:96px 0">
+    <div class="wrap">
+      <p class="label rev">What to Expect</p>
+      <h2 class="d-md rev" style="margin:16px 0 48px;max-width:480px">A ceremony that begins before we arrive.</h2>
+      <div class="proc-steps">
+        <div class="proc-step rev"><div class="proc-n">01</div><h3 class="d-sm">The Consultation</h3><p class="b-sm">A personal conversation &mdash; by telephone or in person &mdash; to understand the property, its history, and your intentions. This is not a formality. It shapes everything that follows.</p></div>
+        <div class="proc-step rev"><div class="proc-n">02</div><h3 class="d-sm">The Ceremony</h3><p class="b-sm">We arrive with carefully sourced tools and materials. We move through the space without haste, attending to every room, threshold, and area of particular significance.</p></div>
+        <div class="proc-step rev"><div class="proc-n">03</div><h3 class="d-sm">The Aftercare</h3><p class="b-sm">A written aftercare guide delivered within 48 hours. Recommendations specific to your property, seasonal guidance, and an open invitation to be in contact in the weeks that follow.</p></div>
+      </div>
+      <div class="creds rev">
+        <div class="cred"><span class="cred-t">Liability</span><span class="cred-v">Fully Insured</span></div>
+        <div class="cred"><span class="cred-t">Affiliation</span><span class="cred-v">BAHA Member</span></div>
+        <div class="cred"><span class="cred-t">Service Area</span><span class="cred-v">South West England &amp; Beyond</span></div>
+        <div class="cred"><span class="cred-t">Response</span><span class="cred-v">Within Two Working Days</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-ban"><div class="wrap"><div class="cta-ban-in rev">
+    <h2 class="d-lg">Ready to begin?</h2>
+    <p class="b-md">An enquiry is the first step. There is no obligation, and we are glad to speak before any commitment is made.</p>
+    <span class="btn btn-g" onclick="go('booking')" role="button" tabindex="0">Book a Ceremony</span>
+  </div></div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /about -->
+
+<!-- ==================== SERVICES ==================== -->
+<div class="page" id="page-services">
+<main id="main-services">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">The Ceremonies</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">A considered ceremony<br>for every threshold.</h1>
+    <p class="b-lg c-earth">Every service is personal, unhurried, and precisely tailored to the space and the person. If you are uncertain which ceremony best fits your situation, please enquire directly.</p>
+  </div></div></div>
+
+  <section style="background:var(--flint);padding:48px 0 96px"><div class="wrap">
+
+    <div class="tier-lbl"><p class="label">Sanctuary &middot; Signature Ceremonies</p></div>
+    <div class="svc-full-cards">
+      <article class="sfc rev"><p class="label">Full Property</p><h2 class="d-sm">New Home Blessing &amp; Space Clearing</h2><p class="b-sm">A new home carries within it the entire history of every life that has moved through its rooms. This ceremony clears that residue completely and establishes the conditions you are choosing to bring forward. Includes pre-appointment consultation, full room-by-room clearing, intention-setting ceremony, crystal and botanical recommendations, and written aftercare guide.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;395</p><p class="sfc-dur">3&ndash;5 hours &middot; In person</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire about this ceremony</span></article>
+      <article class="sfc rev"><p class="label">Closure &amp; Departure</p><h2 class="d-sm">Property Transition Ritual</h2><p class="b-sm">Leaving a long-held home is one of the most emotionally complex transitions a person can make. This ceremony creates a meaningful ritual of completion &mdash; clearing the residual energy, honouring what has happened, and closing the chapter with care. Also appropriate for landlords preparing a property for new tenants.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;295</p><p class="sfc-dur">2&ndash;4 hours &middot; In person</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire about this ceremony</span></article>
+      <article class="sfc rev"><p class="label">Renewal</p><h2 class="d-sm">Home Energy Renewal</h2><p class="b-sm">Some spaces accumulate weight over time. Illness, loss, conflict, or the density of years can settle into the atmosphere of a home until the space itself feels heavy. This ceremony moves through the property thoroughly and thoughtfully, shifting what has stagnated and restoring calm and clarity to every room.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;285</p><p class="sfc-dur">2&ndash;3 hours &middot; In person</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire about this ceremony</span></article>
+    </div>
+
+    <div class="tier-lbl"><p class="label">Hearth &middot; Focused Ceremonies</p></div>
+    <div class="svc-full-cards">
+      <article class="sfc rev"><p class="label">Seasonal</p><h2 class="d-sm">Seasonal Clearing Ceremony</h2><p class="b-sm">Aligned to the equinoxes and solstices, this ceremony maintains the energetic clarity of your home through the turning year. Each seasonal clearing includes specific intention-setting and recommendations aligned to the qualities of that particular season.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;185</p><p class="sfc-dur">1.5&ndash;2.5 hours &middot; In person</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire</span></article>
+      <article class="sfc rev"><p class="label">Individual Room</p><h2 class="d-sm">Single Room Renewal</h2><p class="b-sm">A concentrated clearing for a specific room where energy has stagnated &mdash; a bedroom after illness, a workspace that feels blocked, a therapy room that needs refreshing. Precise, unhurried attention to a single space.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;125</p><p class="sfc-dur">1&ndash;2 hours &middot; In person</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire</span></article>
+      <article class="sfc rev"><p class="label">For the Person</p><h2 class="d-sm">Personal Energetic Cleansing</h2><p class="b-sm">An individual ceremony for the person rather than the property. Clears energetic residue from difficult experiences, major transitions, or simply a period of accumulation. For those who carry the weight of what has passed and are ready to set it down.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;145</p><p class="sfc-dur">60&ndash;90 minutes &middot; In person or remote</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire</span></article>
+    </div>
+
+    <div class="tier-lbl"><p class="label">Curated &middot; Specialist &amp; Commercial</p></div>
+    <div class="svc-full-cards">
+      <article class="sfc rev"><p class="label">Heirlooms &amp; Objects</p><h2 class="d-sm">Object &amp; Heirloom Clearing</h2><p class="b-sm">For inherited items, gifted objects, or possessions that carry an unwelcome charge. This ceremony clears and re-establishes up to five objects per session, returning them to a clean energetic state so they may be kept, gifted, or sold with a clear conscience.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;85</p><p class="sfc-dur">45&ndash;90 minutes</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire</span></article>
+      <article class="sfc rev"><p class="label">Commercial</p><h2 class="d-sm">Workplace &amp; Business Clearing</h2><p class="b-sm">For offices, studios, galleries, therapy practices, boutique accommodation, restaurants. The atmosphere of your business shapes the quality of everything within it. Carried out outside business hours for minimal disruption.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;395</p><p class="sfc-dur">2&ndash;5 hours &middot; Outside business hours</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire</span></article>
+      <article class="sfc rev"><p class="label">Distance</p><h2 class="d-sm">Remote Ceremony</h2><p class="b-sm">A distance-based clearing for clients unable to host an in-person visit. Includes pre-ceremony consultation, the ceremony itself, and a full written report with follow-up call. Available to clients anywhere in the UK and internationally.</p><hr class="rule" style="margin:8px 0"><p class="sfc-p">From &pound;125</p><p class="sfc-dur">45&ndash;60 minutes &middot; Remote</p><span class="al" onclick="go('booking')" style="margin-top:8px">Enquire</span></article>
+    </div>
+
+    <div class="tier-lbl"><p class="label">Enhancements &middot; Add-Ons</p></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="sfc rev" style="grid-column:1/-1"><p class="b-md c-earth">Every ceremony can be enhanced with the following additions. These may be selected at booking or discussed during your consultation.</p></div>
+      <div class="sfc rev"><h3 class="d-sm" style="font-size:18px">Crystal Grid Installation</h3><p class="b-sm">A personalised crystal grid installed and activated within the property, with a written guide for ongoing maintenance.</p><p class="sfc-p" style="font-size:18px">&pound;65</p></div>
+      <div class="sfc rev"><h3 class="d-sm" style="font-size:18px">Sound Healing Addition</h3><p class="b-sm">Crystal singing bowls added to any ceremony, deepening the clearing through resonant sound.</p><p class="sfc-p" style="font-size:18px">&pound;55</p></div>
+      <div class="sfc rev"><h3 class="d-sm" style="font-size:18px">Personalised Botanical Bundle</h3><p class="b-sm">A handcrafted herb and botanical bundle made specifically for your property and the current season.</p><p class="sfc-p" style="font-size:18px">&pound;45</p></div>
+      <div class="sfc rev"><h3 class="d-sm" style="font-size:18px">Follow-Up Clarity Call</h3><p class="b-sm">A 30-minute telephone consultation within four weeks of your ceremony to discuss how the space has settled.</p><p class="sfc-p" style="font-size:18px">&pound;45</p></div>
+    </div>
+
+    <div class="tc" style="margin-top:56px">
+      <span class="al" onclick="go('membership')" style="justify-content:center;font-size:13px">Discover the Stewardship Programme &mdash; ongoing seasonal care</span>
+    </div>
+  </div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /services -->
+
+<!-- ==================== MEMBERSHIP ==================== -->
+<div class="page" id="page-membership">
+<main id="main-membership">
+  <div class="pg-hero bg-dusk" style="padding-top:calc(var(--nav-h) + 80px);padding-bottom:80px"><div class="wrap"><div class="pg-hero-in">
+    <p class="label c-smoke">The Stewardship Programme</p>
+    <h1 class="d-lg c-flint" style="margin:16px 0 24px">Seasonal care<br>for the homes<br>that matter.</h1>
+    <p class="b-lg" style="color:rgba(245,242,238,.65)">A home that is regularly cleared and renewed maintains a quality of atmosphere that is noticeably different. The Stewardship Programme provides ongoing seasonal care for those who understand this.</p>
+  </div></div></div>
+
+  <section class="mem-sec"><div class="wrap">
+    <div class="mem-g">
+      <div class="mem-card rev">
+        <span class="mem-tag">Hearth Plan</span>
+        <p class="mem-name">Twice Yearly</p>
+        <p class="mem-price">&pound;420<sub> /year</sub></p>
+        <div class="mem-feats">
+          <p class="mem-feat-item">Two seasonal ceremonies per year (Spring and Autumn)</p>
+          <p class="mem-feat-item">A personalised botanical bundle at each visit</p>
+          <p class="mem-feat-item">Priority booking for additional services</p>
+          <p class="mem-feat-item">10% discount on all add-ons</p>
+        </div>
+        <span class="btn btn-o" style="border-color:rgba(196,189,180,.4);color:var(--flint)" onclick="go('booking')" role="button" tabindex="0">Enquire About This Plan</span>
+      </div>
+      <div class="mem-card mem-feat rev">
+        <span class="mem-tag">Sanctuary Plan &middot; Most Popular</span>
+        <p class="mem-name">Four Ceremonies</p>
+        <p class="mem-price">&pound;760<sub> /year</sub></p>
+        <div class="mem-feats">
+          <p class="mem-feat-item">Four seasonal ceremonies &mdash; all equinoxes and solstices</p>
+          <p class="mem-feat-item">Priority booking at all times</p>
+          <p class="mem-feat-item">15% discount on all additional services</p>
+          <p class="mem-feat-item">One included Aftercare Report update</p>
+          <p class="mem-feat-item">One remote clarity consultation annually</p>
+        </div>
+        <span class="btn btn-p" onclick="go('booking')" role="button" tabindex="0">Enquire About This Plan</span>
+      </div>
+      <div class="mem-card rev">
+        <span class="mem-tag">Steward Plan</span>
+        <p class="mem-name">Businesses &amp; Large Properties</p>
+        <p class="mem-price">&pound;1,200<sub> /year</sub></p>
+        <div class="mem-feats">
+          <p class="mem-feat-item">Four full ceremonies per year</p>
+          <p class="mem-feat-item">One remote ceremony included</p>
+          <p class="mem-feat-item">Two aftercare reports</p>
+          <p class="mem-feat-item">Priority access at all times</p>
+          <p class="mem-feat-item">20% discount on all add-ons</p>
+          <p class="mem-feat-item">Dedicated annual review call</p>
+        </div>
+        <span class="btn btn-o" style="border-color:rgba(196,189,180,.4);color:var(--flint)" onclick="go('booking')" role="button" tabindex="0">Enquire About This Plan</span>
+      </div>
+    </div>
+    <p class="b-sm tc" style="margin-top:40px;color:rgba(196,189,180,.45)">All plans billed annually or quarterly. Rolling subscriptions cancelled with 30 days&rsquo; notice.</p>
+  </div></section>
+
+  <section class="cta-ban"><div class="wrap"><div class="cta-ban-in rev">
+    <h2 class="d-lg">Not sure which plan fits?</h2>
+    <p class="b-md">Send an enquiry and we will recommend the approach that best suits your home and your life.</p>
+    <span class="btn btn-g" onclick="go('booking')" role="button" tabindex="0">Begin an Enquiry</span>
+  </div></div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /membership -->
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<div class="page" id="page-testimonials">
+<main id="main-testimonials">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">What Clients Say</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">Words from those<br>who have crossed<br>the threshold.</h1>
+  </div></div></div>
+
+  <section style="background:var(--flint);padding:48px 0 96px"><div class="wrap">
+    <div class="testi-grid">
+      <div class="tc-card tc-feat rev">
+        <blockquote>I moved into my house six months ago and always felt strangely unsettled in it. After the clearing I finally felt as though it was mine. It is difficult to explain &mdash; but something genuinely shifted.</blockquote>
+        <p class="tc-attr">&mdash; V.M., Bath &middot; New Home Blessing</p>
+      </div>
+      <div class="tc-card rev">
+        <blockquote>We moved into our Georgian farmhouse in the spring and despite everything being beautifully restored, there was a room I avoided. I mentioned this during the consultation and the focus on that space in particular was remarkable. I use it every day now.</blockquote>
+        <p class="tc-attr">&mdash; P.T., Dorset &middot; Home Energy Renewal</p>
+      </div>
+      <div class="tc-card rev">
+        <blockquote>I was honestly sceptical. My partner booked it as a gift for our new flat and I went along with it good-naturedly. I cannot explain it, but two hours later the flat felt completely different. Light, calm, open. I have recommended Luminal to four people since.</blockquote>
+        <p class="tc-attr">&mdash; D.H., Bristol &middot; New Home Blessing</p>
+      </div>
+      <div class="tc-card rev">
+        <blockquote>We asked Luminal to clear our therapy suite before we opened. The quality of the space was immediately noticed by our first clients &mdash; several said independently that it felt exceptionally calm. We book a seasonal clearing every equinox now.</blockquote>
+        <p class="tc-attr">&mdash; K.V., Bath &middot; Workplace Clearing &amp; Stewardship</p>
+      </div>
+      <div class="tc-card rev" style="background:var(--stone);grid-column:1/-1">
+        <blockquote>My mother passed in our family home and I inherited it. I could not stay there &mdash; not because of anything I can rationally explain, but because of how it felt. The ceremony was a profound experience. I now live there and love it.</blockquote>
+        <p class="tc-attr">&mdash; Name withheld, Wiltshire &middot; Home Energy Renewal after Bereavement</p>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="cta-ban"><div class="wrap"><div class="cta-ban-in rev">
+    <h2 class="d-lg">Ready to experience the difference?</h2>
+    <p class="b-md">Begin with a conversation. There is no obligation.</p>
+    <span class="btn btn-g" onclick="go('booking')" role="button" tabindex="0">Book a Ceremony</span>
+  </div></div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /testimonials -->
+
+<!-- ==================== FAQ ==================== -->
+<div class="page" id="page-faq">
+<main id="main-faq">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">Frequently Asked Questions</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">On the practice,<br>the process,<br>and what to expect.</h1>
+  </div></div></div>
+
+  <section style="background:var(--flint);padding:48px 0 96px"><div class="wrap">
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">What exactly is space clearing?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">Space clearing is the practice of shifting the energetic atmosphere of a place &mdash; clearing residual energy left by previous occupants, difficult events, or the natural accumulation of time, and restoring a quality of calm and clarity to the space. It draws on traditions from many cultures across many centuries, all of which share the understanding that the atmosphere of a space is shaped by what has happened within it &mdash; and that it can be changed.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">Do I need to believe in anything for this to work?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">No. Many of our clients are not particularly spiritual and approach the service from a place of curiosity, openness, or simply a practical desire for their home to feel different. The ceremony involves intention, attention, and beautiful sensory materials &mdash; all of which have a measurable effect on how a space feels, regardless of one&rsquo;s metaphysical framework.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">What will the ceremony involve?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">Each ceremony is tailored to the space and the situation. Most involve a combination of smoke cleansing, sound clearing with crystal singing bowls and bells, the use of protective and restorative botanical and crystal materials, and an intention-setting ceremony specific to your home and circumstances. A pre-appointment consultation shapes the approach; the ceremony itself unfolds with the space.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">How long does a ceremony take?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">This depends on the service. A single-room clearing takes between one and two hours. A full property clearing for a large home may take four to five hours. We will give you a clear estimate during your consultation before any booking is confirmed.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">What should I do to prepare?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">We ask that the property is as tidy as possible and that the atmosphere on the day is quiet &mdash; ideally, only you and any immediate household members present. Please do not deep-clean immediately before the appointment. We will send you a full pre-ceremony preparation guide when your booking is confirmed.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">Will it smell?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">Some ceremonies involve smoke cleansing with ethically sourced dried botanicals. The scent is gentle and dissipates within a few hours. All windows will be opened during the ceremony. If you have a medical sensitivity to smoke, please mention this at enquiry and we will adapt our approach accordingly.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">Do you make any claims about what the ceremony will do?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">We make no medical claims and do not claim to diagnose, treat, or cure any condition. We do not claim to remove supernatural entities or guarantee specific outcomes. What we offer is a skilled, considered, and intentional ceremony that, in our experience and in the experience of our clients, creates a noticeable and meaningful shift in the atmosphere of a space.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">What happens after the ceremony?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">Every client receives a written aftercare guide within 48 hours. This includes recommendations specific to your property, suggested crystals or botanicals to maintain the clarity of the space, and guidance for the season ahead. A follow-up clarity call is available within four weeks as an optional add-on.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">Where do you work?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">Our primary service area is the South West of England and surrounding counties &mdash; Bath, Bristol, Somerset, Wiltshire, Dorset, Gloucestershire, and the Cotswolds. We travel further by arrangement. Remote ceremonies are available to clients anywhere in the UK and internationally.</div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false"><span class="faq-qt">What are your fees?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a">Our fees begin at &pound;85 for object clearing and range to &pound;1,400 for large commercial properties. Full pricing is available on our Services page or shared personally during an enquiry call. A 50% deposit is required to secure all bookings, with the balance due 48 hours before the ceremony.</div>
+      </div>
+
+    </div>
+    <div class="tc" style="margin-top:64px">
+      <p class="b-md c-earth" style="margin-bottom:24px">Have a question that isn&rsquo;t answered here?</p>
+      <span class="btn btn-p" onclick="go('contact')" role="button" tabindex="0">Send Us a Message</span>
+    </div>
+  </div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /faq -->
+
+<!-- ==================== JOURNAL ==================== -->
+<div class="page" id="page-journal">
+<main id="main-journal">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">The Luminal Journal</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">On ritual, season,<br>and the energetic<br>life of homes.</h1>
+  </div></div></div>
+
+  <section style="background:var(--flint);padding:48px 0 96px"><div class="wrap">
+    <div class="g3">
+      <article class="jfc rev"><p class="jnl-date">Midsummer &middot; June 2025</p><h2 class="jnl-t">How to prepare your home for the summer solstice</h2><p class="jnl-b">The longest day invites a particular quality of attention &mdash; to light, to openness, to what we are inviting in for the months ahead. On clearing, intention, and the rituals that mark the turning year.</p><span class="al" style="margin-top:8px">Read this piece</span></article>
+      <article class="jfc rev"><p class="jnl-date">Spring Equinox &middot; March 2025</p><h2 class="jnl-t">What space clearing is &mdash; and what it is not</h2><p class="jnl-b">A considered answer to the questions most often asked about the practice, the tradition, and the experience. For the curious, the sceptical, and those who simply want to understand.</p><span class="al" style="margin-top:8px">Read this piece</span></article>
+      <article class="jfc rev"><p class="jnl-date">Midwinter &middot; December 2024</p><h2 class="jnl-t">The energetic life of a home after bereavement</h2><p class="jnl-b">On the particular weight that grief leaves in a house, and the ceremonies that help a space &mdash; and its people &mdash; begin again. A reflection written with great care.</p><span class="al" style="margin-top:8px">Read this piece</span></article>
+      <article class="jfc rev"><p class="jnl-date">Autumn Equinox &middot; September 2024</p><h2 class="jnl-t">Five crystals for a property that needs grounding</h2><p class="jnl-b">On the stones most suited to anchoring a space &mdash; their properties, their placement, and the quiet attention they ask of us.</p><span class="al" style="margin-top:8px">Read this piece</span></article>
+      <article class="jfc rev"><p class="jnl-date">Summer &middot; July 2024</p><h2 class="jnl-t">Why the atmosphere of a business matters more than you think</h2><p class="jnl-b">On the invisible quality that separates a good professional environment from an exceptional one &mdash; and what can be done when that quality is absent.</p><span class="al" style="margin-top:8px">Read this piece</span></article>
+      <article class="jfc rev"><p class="jnl-date">Spring &middot; April 2024</p><h2 class="jnl-t">On moving into a home someone else loved</h2><p class="jnl-b">For the new homeowner who feels, inexplicably, that a space is not yet theirs. On the history that property holds, and the ceremony that can complete it.</p><span class="al" style="margin-top:8px">Read this piece</span></article>
+    </div>
+  </div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /journal -->
+
+<!-- ==================== BOOKING ==================== -->
+<div class="page" id="page-booking">
+<main id="main-booking">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">Begin Here</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">A ceremony begins<br>with a conversation.</h1>
+    <p class="b-lg c-earth">Complete the form below and we will respond within two working days with a personal note and a recommendation for the ceremony that best suits your situation. There is no obligation to book following an enquiry.</p>
+  </div></div></div>
+
+  <section class="con-sec"><div class="wrap">
+    <div class="con-g">
+      <div class="con-info rev">
+        <h2 class="d-sm">Not sure where<br>to start?</h2>
+        <p class="b-sm" style="margin-top:16px">We are glad to speak before you commit to anything. If you would prefer a telephone conversation first, please call during our office hours.</p>
+        <div class="con-detail">
+          <div class="con-di"><strong>Telephone</strong>+44 (0)1234 567890</div>
+          <div class="con-di"><strong>Office Hours</strong>Monday &ndash; Friday &middot; 9am &ndash; 5pm</div>
+          <div class="con-di"><strong>Email</strong>hello@luminal.co.uk</div>
+          <div class="con-di"><strong>Response</strong>Within two working days</div>
+          <div class="con-di"><strong>Service Area</strong>South West England &amp; beyond. Remote ceremonies available anywhere.</div>
+        </div>
+      </div>
+
+      <div class="rev">
+        <form id="bookingForm" novalidate aria-label="Ceremony enquiry form">
+          <div class="fg2">
+            <div class="fg"><label class="fl" for="fn">First name *</label><input class="fi" type="text" id="fn" name="fn" autocomplete="given-name" required></div>
+            <div class="fg"><label class="fl" for="ln">Last name *</label><input class="fi" type="text" id="ln" name="ln" autocomplete="family-name" required></div>
+          </div>
+          <div class="fg"><label class="fl" for="em">Email address *</label><input class="fi" type="email" id="em" name="em" autocomplete="email" required></div>
+          <div class="fg"><label class="fl" for="ph">Telephone number</label><input class="fi" type="tel" id="ph" name="ph" autocomplete="tel"></div>
+          <div class="fg"><label class="fl" for="co">County or area *</label><input class="fi" type="text" id="co" name="co" placeholder="e.g. Bath, Somerset, Cotswolds" required></div>
+          <div class="fg">
+            <label class="fl" for="ce">Ceremony of interest *</label>
+            <select class="fs" id="ce" name="ce" required>
+              <option value="" disabled selected>Please select a ceremony</option>
+              <option>New Home Blessing &amp; Space Clearing</option>
+              <option>Property Transition Ritual</option>
+              <option>Home Energy Renewal</option>
+              <option>Seasonal Clearing Ceremony</option>
+              <option>Single Room Renewal</option>
+              <option>Personal Energetic Cleansing</option>
+              <option>Object &amp; Heirloom Clearing</option>
+              <option>Workplace &amp; Business Clearing</option>
+              <option>Remote Ceremony</option>
+              <option>Stewardship Programme</option>
+              <option>Not sure &mdash; please advise</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl" for="msg">Your situation and intention *</label><textarea class="fta" id="msg" name="msg" placeholder="Please share a little about your space, what you have been experiencing, and what you are hoping to create&hellip;" required></textarea></div>
+          <div class="fg">
+            <label class="fl" for="ref">How did you hear about Luminal?</label>
+            <select class="fs" id="ref" name="ref">
+              <option value="" disabled selected>Please select</option>
+              <option>Search engine</option>
+              <option>Instagram</option>
+              <option>Personal recommendation</option>
+              <option>Interior designer or architect</option>
+              <option>Estate agent</option>
+              <option>Therapist or practitioner</option>
+              <option>Press or publication</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="fchk">
+            <input type="checkbox" id="cons" name="cons">
+            <label for="cons">I am happy to receive occasional seasonal notes and guidance from Luminal by email. You may unsubscribe at any time.</label>
+          </div>
+          <p class="fnote">By sending this form you agree to our <a href="#" style="color:var(--bark)">Privacy Policy</a>. Your enquiry will be handled with complete discretion.</p>
+          <div style="margin-top:24px">
+            <button type="submit" class="btn btn-p" id="bookBtn">Send Your Enquiry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /booking -->
+
+<!-- ==================== CONTACT ==================== -->
+<div class="page" id="page-contact">
+<main id="main-contact">
+  <div class="pg-hero"><div class="wrap"><div class="pg-hero-in">
+    <p class="label">Contact</p>
+    <h1 class="d-lg" style="margin:16px 0 24px">A quiet word.</h1>
+    <p class="b-lg c-earth">We respond to all enquiries personally, within two working days. If your situation feels urgent, please mention this and we will do our best to accommodate you sooner.</p>
+  </div></div></div>
+
+  <section class="con-sec"><div class="wrap">
+    <div class="con-g">
+      <div class="con-info rev">
+        <div class="con-detail" style="border-top:none;padding-top:0">
+          <div class="con-di"><strong>Telephone</strong>+44 (0)1234 567890</div>
+          <div class="con-di"><strong>Email</strong>hello@luminal.co.uk</div>
+          <div class="con-di"><strong>Office Hours</strong>Monday &ndash; Friday &middot; 9am &ndash; 5pm</div>
+          <div class="con-di"><strong>Location</strong>Somerset, England</div>
+          <div class="con-di"><strong>Service Area</strong>South West England and surrounding counties. Remote ceremonies available anywhere.</div>
+        </div>
+        <div style="margin-top:40px">
+          <p class="label" style="margin-bottom:12px">Follow the Practice</p>
+          <div style="display:flex;gap:16px">
+            <span class="al" style="font-size:10px">Instagram</span>
+            <span class="al" style="font-size:10px">Pinterest</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev">
+        <form id="contactForm" novalidate aria-label="Contact form">
+          <div class="fg"><label class="fl" for="cn">Your name *</label><input class="fi" type="text" id="cn" name="cn" required></div>
+          <div class="fg"><label class="fl" for="cem">Email address *</label><input class="fi" type="email" id="cem" name="cem" required></div>
+          <div class="fg"><label class="fl" for="cmsg">Your message *</label><textarea class="fta" id="cmsg" name="cmsg" style="min-height:200px" required></textarea></div>
+          <p class="fnote">Your message will be handled with complete discretion. See our <a href="#" style="color:var(--bark)">Privacy Policy</a>.</p>
+          <div style="margin-top:24px">
+            <button type="submit" class="btn btn-p" id="conBtn">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer class="foot" style="padding:32px 0"><div class="wrap"><div class="foot-bot" style="border-top:none;padding-top:0"><p class="foot-copy">&copy; 2025 Luminal &middot; <span onclick="go('home')" style="cursor:pointer;color:inherit">Home</span></p><div class="foot-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div></div></footer>
+</div><!-- /contact -->
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+/* ===================================================
+   PAGE NAVIGATION
+   =================================================== */
+const PAGES = ['home','about','services','membership','testimonials','faq','journal','booking','contact'];
+
+function go(page) {
+  PAGES.forEach(p => {
+    const el = document.getElementById('page-' + p);
+    if (el) el.classList.remove('active');
+  });
+  const target = document.getElementById('page-' + page);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    setTimeout(initReveal, 80);
+  }
+  closeMob();
+  // update active nav link
+  document.querySelectorAll('.nav-links a').forEach(a => a.removeAttribute('aria-current'));
+}
+
+/* keyboard support for logo / cta */
+document.querySelectorAll('[role="link"],[role="button"]').forEach(el => {
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') e.target.click();
+  });
+});
+
+/* ===================================================
+   MOBILE NAV
+   =================================================== */
+const burger  = document.getElementById('burger');
+const mobNav  = document.getElementById('mobNav');
+let   navOpen = false;
+
+function openMob() {
+  navOpen = true;
+  mobNav.classList.add('open');
+  burger.classList.add('open');
+  burger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+}
+function closeMob() {
+  navOpen = false;
+  mobNav.classList.remove('open');
+  burger.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+burger.addEventListener('click', () => navOpen ? closeMob() : openMob());
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && navOpen) closeMob(); });
+
+/* ===================================================
+   SCROLL — nav glass effect
+   =================================================== */
+const siteNav = document.getElementById('siteNav');
+window.addEventListener('scroll', () => {
+  siteNav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+/* ===================================================
+   SCROLL REVEAL
+   =================================================== */
+function initReveal() {
+  const items = document.querySelectorAll('.rev:not(.in)');
+  if (!items.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }, i * 55);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  items.forEach(el => io.observe(el));
+}
+initReveal();
+
+/* ===================================================
+   FAQ ACCORDION
+   =================================================== */
+function initFaq() {
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item   = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      // open this one if it was closed
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+initFaq();
+
+/* ===================================================
+   FORM SUBMISSIONS (demo — no backend)
+   =================================================== */
+function handleForm(formId, btnId) {
+  const form = document.getElementById(formId);
+  const btn  = document.getElementById(btnId);
+  if (!form || !btn) return;
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const orig = btn.textContent;
+    btn.textContent = 'Thank you — we will be in touch shortly.';
+    btn.disabled = true;
+    btn.style.opacity = '0.6';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      form.reset();
+    }, 6000);
+  });
+}
+handleForm('bookingForm', 'bookBtn');
+handleForm('contactForm', 'conBtn');
+
+/* ===================================================
+   REDUCED MOTION — disable all animations
+   =================================================== */
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.rev').forEach(el => el.classList.add('in'));
+}
+</script>
+</body>
+</html>
